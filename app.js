@@ -25,4 +25,16 @@ function upateDate() {
   dateEmp.innerText = date.toLocaleDateString("en-us", options);
 }
 
-
+window.scrollTo(0,0)
+let navBar = document.getElementById("nav-bar");
+function hideJacks() {
+  ChangeCSS(".spiral-image", ".spiral-image-alt", true);
+  ChangeCSS(".jack-image", ".jack-image-final", true);
+  ChangeCSS(".jack-image2", ".jack-image-final2", true);
+  ChangeCSS(".jack-image3", ".jack-image-final3", true);
+  ChangeCSS(".jack-image4", ".jack-image-final4", true);
+  ChangeCSS(".locked-section", ".locked-section-alt", true);
+  navBar.style.opacity = "100%";
+  // addBoxes(10);
+  document.body.style.overflow = "scroll";
+}

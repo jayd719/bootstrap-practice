@@ -14,13 +14,12 @@
     <link rel="stylesheet" href="css/about section.css" />
     <title>Bootstrap Example</title>
     <link rel="stylesheet" href="css/main.css" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="app.js"></script>
   </head>
   <body>
+    <!-- nav bar -->
     <nav
       class="navbar navbar-preview fixed-top fixed-top navbar-expand-lg nav-bar"
+      id="nav-bar"
     >
       <div class="container">
         <img src="images/main.png" id="app-logo" class="app-logo" />
@@ -58,11 +57,23 @@
                 href="#offcanvasExample"
                 role="button"
                 aria-controls="offcanvasExample"
-                >Home</a
+                >Resume</a
               >
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="#">Link</a>
+              <a
+                class="nav-link active"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Projects
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Project 1</a></li>
+                <li><a class="dropdown-item" href="#">Project 2</a></li>
+                <li><a class="dropdown-item" href="#">Project 3</a></li>
+              </ul>
             </li>
             <li class="nav-item">
               <a
@@ -79,14 +90,14 @@
         </div>
       </div>
     </nav>
-
+   
     <!-- contact container start -->
     <div
       class="offcanvas offcanvas-end"
       tabindex="-1"
       id="offcanvasNavbar"
       aria-labelledby="offcanvasNavbarLabel"
-      style="width: 38%"
+      style="width: 38%; min-width: 400px"
     >
       <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
@@ -99,8 +110,8 @@
       </div>
       <div class="offcanvas-body">
         <div class="ck contact" id="rightSection">
-          <img src="images/j.png" alt="" style="width:100px;">
-          <h2 class="display-5" style="margin-top: 10%">
+          <img src="images/j.png" alt="" style="width: 200px" />
+          <h2 class="display-5" style="margin-top: 20%">
             Feel free to reach out...
           </h2>
           <h2 class="display-6">I'd love to hear from you!</h2>
@@ -127,15 +138,22 @@
     </div>
     <!-- left container end -->
 
-    <!-- right container start -->
+    <!-- resume container start -->
     <div
       class="offcanvas offcanvas-start"
       tabindex="-1"
       id="offcanvasExample"
       aria-labelledby="offcanvasExampleLabel"
+      style="width: 70%; min-width: 500px"
     >
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvasdd</h5>
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel"></h5>
+        <a
+          href="assets/Jashandeep Singh(JD).pdf"
+          download="newfilename"
+          target="_blank"
+          >Download Resume</a
+        >
         <button
           type="button"
           class="btn-close"
@@ -143,7 +161,16 @@
           aria-label="Close"
         ></button>
       </div>
-      <div class="offcanvas-body">this is where you can have your content</div>
+      <div class="offcanvas-body">
+        <embed
+          src="assets/Jashandeep Singh(JD).pdf"
+          width="100%"
+          height="100%"
+          type="application/pdf"
+          title="Resume-JD"
+          style="background-color: transparent"
+        />
+      </div>
     </div>
     <!-- right container end -->
 
@@ -384,5 +411,59 @@
     ></div>
 
     <!-- End Example Code -->
+
+    <footer>
+      <div class="row-f">
+        <ul>
+          <li>ਜਸ਼ਨਦੀਪ ਸਿੰਘ</li>
+          <li>जशनदीप सिंह</li>
+          <li>جشندیپ سنگھ</li>
+        </ul>
+      </div>
+      <div class="name" id="nameLetter">
+        <img id="letter" src="images/letters/letter-j.png" alt="" />
+        <img id="letter" src="images/letters/letter-a.png" alt="" />
+        <img id="letter" src="images/letters/letter-s.png" alt="" />
+        <img id="letter" src="images/letters/letter-h.png" alt="" />
+        <img id="letter" src="images/letters/letter-a.png" alt="" />
+        <img id="letter" src="images/letters/letter-n.png" alt="" />
+        <img id="letter" src="images/letters/letter-d.png" alt="" />
+        <img id="letter" src="images/letters/letter-e.png" alt="" />
+        <img id="letter" src="images/letters/letter-e.png" alt="" />
+        <img
+          id="letter"
+          src="images/letters/letter-p.png"
+          alt=""
+          style="margin-right: 20px"
+        />
+        <img id="letter" src="images/letters/letter-s.png" alt="" />
+        <img id="letter" src="images/letters/letter-i.png" alt="" />
+        <img id="letter" src="images/letters/letter-n.png" alt="" />
+        <img id="letter" src="images/letters/letter-g.png" alt="" />
+        <img id="letter" src="images/letters/letter-h.png" alt="" />
+      </div>
+      <div class="row-f">
+        <ul>
+          <li>Credits</li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            Contact
+          </li>
+        </ul>
+      </div>
+      <div class="row-f">
+        Copyright © 2024 jashandeep.co.uk - All rights reserved
+      </div>
+    </footer>
   </body>
+  <script src="app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </html>

@@ -5,7 +5,7 @@
 
 body {
   background: #e6e6e6;
-  
+  height: 100vh;
 }
 html {
   scroll-behavior: smooth;
@@ -13,6 +13,7 @@ html {
 a {
   text-decoration: inherit;
   color: inherit;
+  cursor: inherit;
 }
 
 *::-webkit-scrollbar {
@@ -20,7 +21,7 @@ a {
 }
 
 .nav-bar {
-  transition: .5s;
+  transition: 0.5s;
   background-color: rgb(255, 255, 255);
   color: #000;
 }
@@ -63,3 +64,34 @@ ul {
   cursor: pointer;
   margin-right: 50%;
 }
+
+footer {
+  background: #000;
+  text-align: center;
+  padding: 0.6% 0%;
+  color: gray;
+  font-size: 0.8em;
+}
+
+/* footer */
+footer ul li {
+  display: inline-block;
+  margin: 0px 30px;
+  transition: 0.4s ease-out;
+}
+
+footer li:hover {
+  color: rgba(240, 248, 255, 0.91);
+  cursor: pointer;
+}
+.name {
+  padding: 1%;
+  display: inline-flex;
+}
+
+.name img {
+  filter: grayscale(1);
+  width: 35px;
+}
+
+/* footerEnd */
