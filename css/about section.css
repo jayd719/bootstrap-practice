@@ -1,4 +1,3 @@
-
 /* about section */
 .heading {
   font-family: "Playfair Display", serif;
@@ -206,16 +205,37 @@
 .offcanvas {
   text-align: center;
   /* background-image: linear-gradient(to bottom, #00b09b, #96c93d); */
-  background-color: rgb(255, 255, 255);
+  background: radial-gradient(
+      178.94% 106.41% at 26.42% 106.41%,
+      #fff7b1 0%,
+      rgba(255, 255, 255, 0) 71.88%
+    )
+    #ffffff;
   border-radius: 10px;
   /* margin-right: 26%; */
 }
 .socials img {
   width: 60px;
-  filter: grayscale(1) invert(1) brightness(0.5);
+  filter: grayscale(.5) invert(1) brightness(0.5);
   transition: 0.5s;
 }
 .socials img:hover {
   filter: none;
   transform: scale(1.1);
+  cursor: pointer;
+}
+
+.textone {
+  word-break: break-all;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 135%;
+  color: rgba(87, 77, 51, .9);
+}
+
+.texttwo {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 134.49%;
+  color: rgba(87, 77, 51, 0.66);
 }
